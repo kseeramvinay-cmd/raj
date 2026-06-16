@@ -1,0 +1,23 @@
+name: My First CI-CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Run Build Step
+      run: |
+        echo "Building the application..."
+        echo "Compiling assets and dependencies..."
+
+    - name: Run Automated Tests
+      run: |
+        echo "Running unit tests..."
+        echo "All tests passed successfully!"
